@@ -1,0 +1,37 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
+const Navbar = () => {
+  return (
+    <nav className="bg-custom-image p-7 shadow-black">
+      <div className="container mx-auto flex justify-between items-center ">
+        
+        <div className="flex ">
+          <div className="text-green-400 mx-12 font-italic font-bold text-5xl flex-grow text-center">
+            <Link to="/" >About Me.</Link>
+          </div>
+        </div>
+
+        
+        <ul className="flex space-x-10 text-xl">
+          <li><Link to="/" className="text-white">Home</Link></li>
+          <li><Link to="/about" className="text-white ">About</Link></li>
+          <li><Link to="/skills" className="text-white">Skills</Link></li>
+          <li><Link to="/projects" className="text-white">Projects</Link></li>
+          <li><Link to="/resume" className="text-white">Resume</Link></li>
+          <li><Link to="/portfolio" className="text-white">Portfolio</Link></li>
+          <li><Link to="/blog" className="text-white">Blog</Link></li>
+          <li><Link to="/contact" className="text-white">Contact</Link></li>
+          <li><button className="text-blue-700 font-extrabold bg-white p-1 rounded-md">Hire Me</button></li>
+        </ul>
+
+        
+        <div></div>
+      </div>
+      <Outlet/>
+    </nav>
+  );
+};
+
+export default Navbar;
