@@ -3,17 +3,19 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import img from "../assets/IMG35.jpg";
 import { Link } from "react-router-dom";
+import Type from "./Type";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-custom-image bg-cover bg-center text-white flex items-center  justify-center p-6">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:space-x-8 space-y-8 md:space-y-0">
         <div className="flex flex-col mb-48 ml-14 md:items-start space-y-4 md:w-1/2 transition-transform transform hover:scale-110">
-          <h1 className="text-8xl md:text-6xl font-bold  justify-start ">
+          <h1 className="text-center md:text-6xl font-bold  justify-start ">
             Hi, This is <span className="text-8xl text-green-400">Nirmal</span>,
-            I'm a Professional Software Developer.
+            I'm a <span className="text-green-400"><Type/></span>
           </h1>
-          <ul className="flex space-x-10 text-3xl pt-6">
+          <div className=" flex justify-center items-center w-full">
+          <ul className="flex mt-12 space-x-10 text-3xl pt-6">
             <li className="">
               <Link
                 to="https://github.com/Nirmallamrin"
@@ -65,6 +67,7 @@ const Home = () => {
               </a>
             </li>
           </ul>
+          </div>
         </div>
         <div className="md:w-1/2 flex items-start justify-start">
           <img

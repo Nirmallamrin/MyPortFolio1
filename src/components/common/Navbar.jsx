@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+import { FaCodeBranch } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -23,10 +24,11 @@ const Navbar = () => {
           <li><Link to="/portfolio" className="text-white">Portfolio</Link></li>
           <li><Link to="/blog" className="text-white">Blog</Link></li>
           <li><Link to="/contact" className="text-white">Contact</Link></li>
-          <li><button className="text-blue-700 font-extrabold bg-white p-1 rounded-md">Hire Me</button></li>
-        </ul>
-
-        
+          <li><button className="text-black font-extrabold bg-white hover:bg-gray-800 p-1 rounded-md">Hire Me</button></li>
+          <li><Link to="https://github.com/Nirmallamrin/MyPortFolio1.git"
+          target="_blank"
+           className='text-white text-3xl font-bold hover:text-gray-700'><FaCodeBranch /></Link></li>
+        </ul>   
         <div></div>
       </div>
       <Outlet/>
