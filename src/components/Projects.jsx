@@ -39,9 +39,9 @@ const Projects = () => {
      
       <h1 className="text-white flex justify-center text-3xl font-bold mb-12">My Projects</h1>
       <div className="m-12 ">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-300 p-6 rounded-lg shadow-lg">
+          <div key={index} className="bg-gray-300 p-12 rounded-lg shadow-lg transition-transform transform hover:scale-110">
             <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-fit rounded-t-lg" />
             <div className="p-4">
               <h2 className="text-xl font-semibold mb-2">{project.title}</h2>

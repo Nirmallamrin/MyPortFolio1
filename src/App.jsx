@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import Header from './components/Header';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </main>
       <Footer/>

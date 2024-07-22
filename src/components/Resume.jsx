@@ -15,7 +15,7 @@ const Resume = () => {
             Download Resume
           </Link>
         </button>
-        <img src={img2} alt="Resume" className="w-full h-auto rounded-lg shadow-lg" />
+        <img src={img2} alt="Resume" className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-110" />
       </div>
     </div>
   );
