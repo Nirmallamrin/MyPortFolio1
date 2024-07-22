@@ -28,7 +28,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Right Side: Form */}
+      
       <div className="w-full md:w-1/2">
         <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
         <form action="" className="space-y-4">
