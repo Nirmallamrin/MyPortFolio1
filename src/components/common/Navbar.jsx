@@ -21,7 +21,6 @@ const Navbar = () => {
           <li><Link to="/skills" className="text-white">Skills</Link></li>
           <li><Link to="/projects" className="text-white">Projects</Link></li>
           <li><Link to="/resume" className="text-white">Resume</Link></li>
-          <li><Link to="/portfolio" className="text-white">Portfolio</Link></li>
           <li><Link to="/blog" className="text-white">Blog</Link></li>
           <li><Link to="/contact" className="text-white">Contact</Link></li>
           <li><button className="text-black font-extrabold bg-white hover:bg-gray-800 p-1 rounded-md">Hire Me</button></li>
