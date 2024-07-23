@@ -37,7 +37,7 @@ const Projects = () => {
   return (
     <div className="bg-custom-image p-8">
      
-      <h1 className="text-white flex justify-center text-3xl font-bold mb-12">My Projects</h1>
+      <h1 className="font-bold italic text-white text-5xl flex justify-center  mb-12">My Projects</h1>
       <div className="m-12 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
         {projects.map((project, index) => (

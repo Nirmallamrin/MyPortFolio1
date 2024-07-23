@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="bg-black p-12 ">
         <div className="flex justify-between ">
-            <p className="text-white">Created By <span className="text-2xl font-bold text-green-400">Nirmal</span></p>
+            <p className="text-white">Designed and Created By <span className="text-2xl font-bold text-green-400">Nirmal</span></p>
             <p className="text-white">copyright @2024</p>
             <ul className="text-white flex space-x-6">
             <li className="">

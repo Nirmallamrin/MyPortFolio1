@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className=" bg-custom-image text-white flex flex-col items-center">
       <div className="m-12">
-        <h1 className="text-5xl font-bold text-center mb-12">About Me</h1>
+        <h1 className="font-bold italic text-white text-5xl text-center mb-12">About Me</h1>
         <div className="flex flex-col justify-start  md:flex-row items-start md:space-x-8 space-y-8 md:space-y-0">
           <div className="md:w-1/2 flex items-center justify-center">
             <img

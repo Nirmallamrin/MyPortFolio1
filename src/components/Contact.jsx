@@ -46,6 +46,7 @@ const Contact = () => {
 
   return (
     <div className="bg-custom-image flex flex-col md:flex-row justify-between items-start p-8 bg-gray-900">
+      
       <div className="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center items-center">
         <h2 className="text-white text-3xl font-bold mb-4">Contact Information</h2>
         <div className="flex flex-col justify-center items-center mt-10">
@@ -62,22 +63,22 @@ const Contact = () => {
               <FaLinkedin className="text-xl" />
               <Link
                 to="https://www.linkedin.com/in/nirmal-mani-399125268/"
-                className="text-blue-400 hover:underline"
+                className="text-blue-300 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                linkedin.com/in/yourprofile
+                linkedin.com/in/nirmal-mani
               </Link>
             </li>
             <li className="text-gray-300 flex items-center space-x-2">
               <FaMapMarkerAlt className="text-xl" />
               <Link
                 to="https://www.google.com/maps/place/yourlocation"
-                className="text-blue-400 hover:underline"
+                className="text-blue-300 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View on Google Maps
+                Palakkad, kerala
               </Link>
             </li>
           </ul>

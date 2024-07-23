@@ -11,7 +11,7 @@ const Skills = () => {
   return (
     <div className="bg-custom-image min-h-screen py-12">
       <div className="text-white flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold mb-8">Skills</h1>
+        <h1 className="font-bold italic text-white text-5xl mb-8">Skills</h1>
 
         <div className="w-full max-w-5xl">
           <h2 className="flex justify-center text-2xl font-semibold mt-12 mb-6">Technical Skills</h2>

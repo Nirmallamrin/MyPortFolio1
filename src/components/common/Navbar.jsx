@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-custom-image p-5 shadow-md">
+    <nav className="bg-custom-image px-12 py-6 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-green-400 font-italic font-bold text-3xl lg:text-5xl">
           <Link to="/">About Me.</Link>
