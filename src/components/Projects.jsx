@@ -1,6 +1,7 @@
 import React from 'react'
 import ecommerce from "../assets/IMG39.jpg"
 import news from "../assets/IMG40.jpg"
+import weather from "../assets/IMG41.png"
 const projects = [
   {
     title: 'E-Commerce Web Application',
@@ -19,9 +20,9 @@ const projects = [
   {
     title: "Weather App",
     description: " Weather App using React Vite",
-    imageUrl: "",
-    liveLink: 'https://your-live-link.com',
-    githubLink: 'https://github.com/your-username/news-website',
+    imageUrl: weather,
+    liveLink: 'https://weather-app-dun-kappa-84.vercel.app/',
+    githubLink: 'https://github.com/Nirmallamrin/WeatherApp.git',
   },
   {
     title: "",
