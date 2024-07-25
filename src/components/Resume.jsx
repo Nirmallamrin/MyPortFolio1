@@ -8,7 +8,7 @@ const Resume = () => {
       <div className="flex flex-col justify-center items-center space-y-8">
         <button className="p-5 bg-blue-700 rounded-md hover:bg-green-400">
           <Link 
-            to="https://drive.google.com/file/d/15MC1IwNBJ-OjsMNG6Gznw5CDJoEFrOwQ/view?usp=drivesdk"
+            to="https://drive.google.com/file/d/1zFvojeP-ToQtK1IZ33MD-XKUU5Veq4VU/view"
             target="_blank"
             rel="noopener noreferrer"
           >
