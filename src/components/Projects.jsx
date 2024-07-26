@@ -2,6 +2,7 @@ import React from 'react'
 import ecommerce from "../assets/IMG39.jpg"
 import news from "../assets/IMG40.jpg"
 import weather from "../assets/IMG41.png"
+import todo from "../assets/IMG42.png"
 const projects = [
   {
     title: 'E-Commerce Web Application',
@@ -25,11 +26,11 @@ const projects = [
     githubLink: 'https://github.com/Nirmallamrin/WeatherApp.git',
   },
   {
-    title: "",
-    description: "",
-    imageUrl: "",
-    liveLink: 'https://your-live-link.com',
-    githubLink: 'https://github.com/your-username/news-website',
+    title: "To Do List ",
+    description: "To Do List App using React Vite",
+    imageUrl: todo,
+    liveLink: 'https://to-do-list-seven-beta-43.vercel.app/',
+    githubLink: 'https://github.com/Nirmallamrin/To-Do-List.git',
   },
   
 ];
