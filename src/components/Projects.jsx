@@ -3,6 +3,7 @@ import ecommerce from "../assets/IMG39.jpg"
 import news from "../assets/IMG40.jpg"
 import weather from "../assets/IMG41.png"
 import todo from "../assets/IMG42.png"
+import expense from "../assets/IMG43.png"
 const projects = [
   {
     title: 'E-Commerce Web Application',
@@ -31,6 +32,13 @@ const projects = [
     imageUrl: todo,
     liveLink: 'https://to-do-list-seven-beta-43.vercel.app/',
     githubLink: 'https://github.com/Nirmallamrin/To-Do-List.git',
+  },
+  {
+    title: "Expense Tracker",
+    description: "Expense Tracker App using React Vite",
+    imageUrl: expense,
+    liveLink: 'https://expense-tracker-rouge-ten.vercel.app/',
+    githubLink: 'https://github.com/Nirmallamrin/ExpenseTracker.git',
   },
   
 ];
