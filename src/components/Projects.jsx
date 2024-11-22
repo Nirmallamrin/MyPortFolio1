@@ -4,6 +4,7 @@ import news from "../assets/IMG40.jpg"
 import weather from "../assets/IMG41.png"
 import todo from "../assets/IMG42.png"
 import expense from "../assets/IMG43.png"
+import nuxt from "../assets/IMG44.png"
 const projects = [
   {
     title: 'E-Commerce Web Application',
@@ -39,6 +40,13 @@ const projects = [
     imageUrl: expense,
     liveLink: 'https://expense-tracker-rouge-ten.vercel.app/',
     githubLink: 'https://github.com/Nirmallamrin/ExpenseTracker.git',
+  },
+  {
+    title: "Nuxt Portfolio",
+    description: "My Portfolio using Nuxt.js",
+    imageUrl: nuxt,
+    
+    githubLink: 'https://github.com/Nirmallamrin/nuxtPortfolio.git',
   },
   
 ];
