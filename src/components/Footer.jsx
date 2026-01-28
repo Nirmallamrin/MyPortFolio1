@@ -1,69 +1,51 @@
 import React from 'react'
 import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="bg-black p-12 ">
-        <div className="flex justify-between ">
-            <p className="text-white">Designed and Created By <span className="text-2xl font-bold text-green-400">Nirmal</span></p>
-            <p className="text-white">copyright @2024</p>
-            <ul className="text-white flex space-x-6">
-            <li className="">
-              <Link
-                to="https://github.com/Nirmallamrin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" hover:text-gray-400"
-              >
+    <footer className="bg-slate-950 border-t border-white/5 py-12 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-center md:text-left">
+            <h3 className="text-xl font-bold text-white mb-2">
+              NI<span className="text-green-400">RMAL</span><span className="text-green-500">.</span>
+            </h3>
+            <p className="text-slate-500 text-sm max-w-xs">
+              Building high-quality digital experiences with mission-driven developers.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex space-x-6 text-xl">
+              <a href="https://github.com/Nirmallamrin" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-green-400 transition-colors">
                 <IoLogoGithub />
-              </Link>
-            </li>
-            <li className=" ">
-              <a
-                href="https://www.linkedin.com/in/nirmal-mani-399125268/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400"
-              >
+              </a>
+              <a href="https://www.linkedin.com/in/nirmal-mani-399125268/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-green-400 transition-colors">
                 <FaLinkedin />
               </a>
-            </li>
-            <li>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400"
-              >
-                <FaFacebook />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/lamrin_____6/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" hover:text-gray-400"
-              >
+              <a href="https://www.instagram.com/lamrin_____6/?hl=en" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-green-400 transition-colors">
                 <FaInstagram />
               </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400"
-              >
-                <FaTwitter />
+              <a href="mailto:hello@nirmal.com" className="text-slate-400 hover:text-green-400 transition-colors">
+                <FaEnvelope />
               </a>
-            </li>
-            </ul>
+            </div>
+          </div>
+
+          <div className="text-center md:text-right">
+            <p className="text-slate-400 text-sm">
+              &copy; {currentYear} <span className="text-white font-semibold">Nirmal Mani</span>.
+            </p>
+            <p className="text-slate-600 text-xs mt-1">All Rights Reserved.</p>
+          </div>
         </div>
-    </div>
+      </div>
+    </footer>
   )
 }
 
-export default Footer
+export default Footer;

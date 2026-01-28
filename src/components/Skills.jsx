@@ -3,87 +3,90 @@ import { TiHtml5 } from "react-icons/ti";
 import { IoLogoCss3, IoLogoJavascript, IoLogoVercel } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiNodejs } from "react-icons/di";
-import { SiExpress, SiMongodb, SiPostman } from "react-icons/si";
+import { SiExpress, SiMongodb, SiPostman, SiSupabase, SiWordpress } from "react-icons/si";
 import { FaReact, FaWindows, FaSlack } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
 const Skills = () => {
+  const technicalSkills = [
+    { name: "HTML5", icon: <TiHtml5 className="text-orange-500" /> },
+    { name: "CSS3", icon: <IoLogoCss3 className="text-blue-500" /> },
+    { name: "JavaScript", icon: <IoLogoJavascript className="text-yellow-400" /> },
+    { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-cyan-400" /> },
+    { name: "React", icon: <FaReact className="text-blue-400" /> },
+    { name: "Node.js", icon: <DiNodejs className="text-green-500" /> },
+    { name: "Express.js", icon: <SiExpress className="text-slate-300" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+    { name: "Supabase", icon: <SiSupabase className="text-emerald-500" /> },
+    { name: "WordPress", icon: <SiWordpress className="text-blue-400" /> },
+  ];
+
+  const tools = [
+    { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
+    { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+    { name: "Vercel", icon: <IoLogoVercel className="text-white" /> },
+    { name: "Slack", icon: <FaSlack className="text-purple-400" /> },
+    { name: "Windows", icon: <FaWindows className="text-blue-400" /> },
+  ];
+
+  const softSkills = ["English", "Malayalam", "Tamil", "Communication", "Problem Solving"];
+
   return (
-    <div className="bg-custom-image min-h-screen py-12">
-      <div className="text-white flex flex-col justify-center items-center">
-        <h1 className="font-bold italic text-white text-5xl mb-8">Skills</h1>
+    <div className="bg-custom-image min-h-screen py-32 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-20">
+          <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
+            MY <span className="text-gradient">SKILLS</span>
+          </h1>
+          <div className="w-24 h-1.5 bg-green-500 mx-auto rounded-full"></div>
+        </div>
 
-        <div className="w-full max-w-5xl">
-          <h2 className="flex justify-center text-2xl font-semibold mt-12 mb-6">Technical Skills</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div className="card">
-              <TiHtml5 className="text-6xl mx-auto" />
-              <p className="mt-2">HTML5</p>
-            </div>
-            <div className="card">
-              <IoLogoCss3 className="text-6xl mx-auto" />
-              <p className="mt-2">CSS3</p>
-            </div>
-            <div className="card">
-              <RiTailwindCssFill className="text-6xl mx-auto" />
-              <p className="mt-2">Tailwind CSS</p>
-            </div>
-            <div className="card">
-              <IoLogoJavascript className="text-6xl mx-auto" />
-              <p className="mt-2">JavaScript</p>
-            </div>
-            <div className="card">
-              <FaReact className="text-6xl mx-auto" />
-              <p className="mt-2">React</p>
-            </div>
-            <div className="card">
-              <DiNodejs className="text-6xl mx-auto" />
-              <p className="mt-2">Node.js</p>
-            </div>
-            <div className="card">
-              <SiExpress className="text-6xl mx-auto" />
-              <p className="mt-2">Express.js</p>
-            </div>
-            <div className="card">
-              <SiMongodb className="text-6xl mx-auto" />
-              <p className="mt-2">MongoDB</p>
+        {/* Technical Skills */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-10 border-l-4 border-green-500 pl-4 uppercase tracking-widest text-slate-400">
+            Technical Proficiency
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {technicalSkills.map((skill, index) => (
+              <div key={index} className="card group">
+                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {skill.icon}
+                </div>
+                <p className="font-semibold text-slate-300">{skill.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Tools */}
+          <div>
+            <h2 className="text-2xl font-bold mb-10 border-l-4 border-green-500 pl-4 uppercase tracking-widest text-slate-400">
+              Tools I Leverage
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {tools.map((tool, index) => (
+                <div key={index} className="card group">
+                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {tool.icon}
+                  </div>
+                  <p className="font-semibold text-slate-300">{tool.name}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <h2 className="flex justify-center text-2xl font-semibold mt-12 mb-6">Soft Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="card">
-              <p className="text-xl">English</p>
-            </div>
-            <div className="card">
-              <p className="text-xl">Malayalam</p>
-            </div>
-            <div className="card">
-              <p className="text-xl">Tamil</p>
-            </div>
-          </div>
-
-          <h2 className="flex justify-center text-2xl font-semibold mt-12 mb-6">Tools I Use</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div className="card">
-              <FaWindows className="text-6xl mx-auto" />
-              <p className="mt-2">Windows</p>
-            </div>
-            <div className="card">
-              <VscVscode className="text-6xl mx-auto" />
-              <p className="mt-2">VS Code</p>
-            </div>
-            <div className="card">
-              <SiPostman className="text-6xl mx-auto" />
-              <p className="mt-2">Postman</p>
-            </div>
-            <div className="card">
-              <IoLogoVercel className="text-6xl mx-auto" />
-              <p className="mt-2">Vercel</p>
-            </div>
-            <div className="card">
-              <FaSlack className="text-6xl mx-auto" />
-              <p className="mt-2">Slack</p>
+          {/* Soft Skills */}
+          <div>
+            <h2 className="text-2xl font-bold mb-10 border-l-4 border-green-500 pl-4 uppercase tracking-widest text-slate-400">
+              Human Skills
+            </h2>
+            <div className="flex flex-wrap gap-4">
+              {softSkills.map((skill, index) => (
+                <div key={index} className="px-6 py-4 glass-card bg-white/5 hover:bg-green-500/10 border-white/10 hover:border-green-500/50 flex-1 min-w-[150px] text-center font-bold text-slate-300 transition-all cursor-default">
+                  {skill}
+                </div>
+              ))}
             </div>
           </div>
         </div>
