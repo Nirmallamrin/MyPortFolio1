@@ -1,5 +1,5 @@
 import React from "react";
-import img2 from "../assets/IMG38.png";
+import img2 from "../assets/IMG.png";
 import { FaDownload, FaEye } from "react-icons/fa";
 
 const Resume = () => {
@@ -14,21 +14,14 @@ const Resume = () => {
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <a
-              href="https://drive.google.com/file/d/1RS6nPSN4O3fMsOqyf2R-yVSfIZtRKwiI/view?usp=sharing"
+              href="https://drive.google.com/file/d/1UG_igq2vYn_6P-zX_9oQyeTTBbTvViYJ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-green-500 hover:bg-green-600 text-slate-900 font-bold rounded-xl transition-all transform hover:scale-105 flex items-center gap-2 shadow-xl shadow-green-500/20"
             >
               <FaDownload /> Download PDF
             </a>
-            <a
-              href="https://drive.google.com/file/d/1RS6nPSN4O3fMsOqyf2R-yVSfIZtRKwiI/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all transform hover:scale-105 flex items-center gap-2"
-            >
-              <FaEye /> View Full Screen
-            </a>
+            
           </div>
         </div>
 

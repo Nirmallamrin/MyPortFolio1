@@ -10,7 +10,7 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-custom-image min-h-screen py-32 px-6 lg:py-48">
+    <div className="bg-custom-image min-h-screen py-20 px-6 ">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -93,12 +93,7 @@ const About = () => {
             </div>
 
             {/* Actions */}
-            <div className="pt-6 flex justify-center lg:justify-start">
-              <button className="group px-12 py-5 bg-green-500 hover:bg-green-600 text-slate-900 font-black rounded-2xl transition-all transform hover:scale-105 active:scale-95 shadow-2xl shadow-green-500/30 flex items-center gap-3">
-                DOWNLOAD RESUME
-                <div className="w-1.5 h-1.5 bg-slate-900 rounded-full animate-ping"></div>
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
