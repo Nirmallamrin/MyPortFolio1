@@ -8,7 +8,7 @@ import Type from "./Type";
 const Home = () => {
   return (
     <div className="min-h-screen  bg-custom-image bg-cover bg-center text-white flex items-center justify-center p-6 pt-32 lg:pt-20">
-      <div className=" max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+      <div className=" container mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         {/* Left Content */}
         <div className="flex flex-col items-center md:items-start space-y-8 md:w-1/2">
           <div className="space-y-4 text-center md:text-left">

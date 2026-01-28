@@ -10,57 +10,93 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-custom-image min-h-screen py-32 px-6">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+    <div className="bg-custom-image min-h-screen py-32 px-6 lg:py-48">
+      <div className="container mx-auto max-w-7xl">
+        {/* Section Header */}
+        <div className="text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
             ABOUT <span className="text-gradient">ME</span>
           </h1>
           <div className="w-24 h-1.5 bg-green-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Image Section */}
-          <div className="lg:w-2/5 relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-            <img
-              src={img1}
-              alt="Nirmal Mani"
-              className="relative rounded-2xl w-full h-[500px] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 border border-white/10"
-            />
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 lg:gap-20">
+          {/* Left Side: Image Section */}
+          <div className="w-full lg:w-5/12 max-w-md lg:max-w-none">
+            <div className="relative group mx-auto lg:mx-0">
+              {/* Decorative Glow */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-green-500/30 to-emerald-600/30 rounded-3xl blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-500"></div>
+
+              <div className="relative overflow-hidden rounded-3xl border-2 border-white/10 shadow-2xl">
+                <img
+                  src={img1}
+                  alt="Nirmal Mani"
+                  className="w-full h-auto lg:h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                />
+                {/* Image Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              </div>
+            </div>
           </div>
 
-          {/* Content Section */}
-          <div className="lg:w-3/5 space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold text-white uppercase tracking-tight">
-                Crafting Digital Experiences <span className="text-green-400">Through Code</span>
+          {/* Right Side: Content Section */}
+          <div className="w-full lg:w-7/12 flex flex-col space-y-10">
+            <div className="space-y-6 text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tight leading-tight">
+                Crafting Digital Excellence <br className="hidden md:block" />
+                <span className="text-green-400 font-extrabold italic">Through Modern Code</span>
               </h2>
-              <p className="text-slate-400 text-lg leading-relaxed font-medium">
-                I am a professional software developer specializing in the MERN stack (MongoDB, Express, React, Node.js).
-                With a deep passion for clean architecture and user-centric design, I transform complex requirements into
-                seamless, high-performance web applications.
-              </p>
-              <p className="text-slate-400 text-lg leading-relaxed font-medium">
-                My journey in tech is driven by curiosity and a commitment to continuous improvement. Whether it's
-                architecting scalable backends or crafting pixel-perfect frontends, I strive for excellence in every line of code.
-              </p>
+
+              <div className="grid gap-8">
+                {/* Work Experience Card */}
+                <div className="glass-card hover:bg-white/5 border-white/5 p-8 transition-all duration-300">
+                  <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <div className="flex-shrink-0 p-4 bg-green-500/10 rounded-2xl text-green-400">
+                      <FaBriefcase size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-widest text-center md:text-left">Working Experience</h3>
+                      <p className="text-slate-400 leading-relaxed font-medium text-center md:text-left">
+                        I specialize in <span className="text-white font-semibold">React (Vite)</span> and <span className="text-white font-semibold">Next.js</span> development.
+                        My professional work focuses on building high-performance applications with <span className="text-white font-semibold">Supabase</span> for real-time backends, solidifying my ability to deliver scalable and modern digital products.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Education/Study Card */}
+                <div className="glass-card hover:bg-white/5 border-white/5 p-8 transition-all duration-300">
+                  <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <div className="flex-shrink-0 p-4 bg-blue-500/10 rounded-2xl text-blue-400">
+                      <FaGraduationCap size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-widest text-center md:text-left">Deep Learning</h3>
+                      <p className="text-slate-400 leading-relaxed font-medium text-center md:text-left">
+                        Mastered the <span className="text-white font-semibold">MERN Stack</span> core fundamentals. My academic and self-driven study path has equipped me with a deep understanding of database architecture (MongoDB), backend logic (Express/Node), and frontend reactivity (React).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {/* Stats Grid - Aligned for better flow */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 pt-4">
               {stats.map((stat, index) => (
-                <div key={index} className="glass-card p-6 border-white/5 flex flex-col items-center text-center">
-                  <div className="text-3xl text-green-400 mb-2">{stat.icon}</div>
-                  <div className="text-xl font-bold text-white">{stat.value}</div>
-                  <div className="text-sm text-slate-500 uppercase tracking-widest">{stat.label}</div>
+                <div key={index} className="glass-card p-6 border-white/5 flex flex-col items-center text-center group hover:border-green-500/30 transition-colors">
+                  <div className="text-2xl md:text-3xl text-green-500 mb-3 group-hover:scale-110 transition-transform">{stat.icon}</div>
+                  <div className="text-lg md:text-xl font-black text-white">{stat.value}</div>
+                  <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">{stat.label}</div>
                 </div>
               ))}
             </div>
 
-            <div className="pt-4">
-              <button className="px-10 py-4 bg-green-500 hover:bg-green-600 text-slate-900 font-bold rounded-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-green-500/20">
-                Download Resume
+            {/* Actions */}
+            <div className="pt-6 flex justify-center lg:justify-start">
+              <button className="group px-12 py-5 bg-green-500 hover:bg-green-600 text-slate-900 font-black rounded-2xl transition-all transform hover:scale-105 active:scale-95 shadow-2xl shadow-green-500/30 flex items-center gap-3">
+                DOWNLOAD RESUME
+                <div className="w-1.5 h-1.5 bg-slate-900 rounded-full animate-ping"></div>
               </button>
             </div>
           </div>
