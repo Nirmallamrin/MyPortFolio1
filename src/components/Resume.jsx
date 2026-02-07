@@ -4,10 +4,10 @@ import { FaDownload, FaEye } from "react-icons/fa";
 
 const Resume = () => {
   return (
-    <div className="min-h-screen bg-custom-image-about py-32 px-6 flex flex-col items-center">
+    <div className="min-h-screen bg-custom-image-about py-24 md:py-32 px-4 md:px-6 flex flex-col items-center">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 tracking-tight">
             MY <span className="text-gradient">RESUME</span>
           </h1>
           <div className="w-24 h-1.5 bg-green-500 mx-auto rounded-full mb-12"></div>

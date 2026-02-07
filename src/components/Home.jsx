@@ -6,22 +6,22 @@ import Type from "./Type";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-custom-image bg-cover bg-center text-white flex items-center justify-center p-6 pt-32 lg:pt-20 overflow-hidden">
-      <div className="container mx-auto px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <div className="min-h-screen bg-custom-image bg-cover bg-center text-white flex items-center justify-center p-4 pt-28 md:p-6 md:pt-32 lg:pt-20 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         {/* Left Content */}
         <div className="flex flex-col items-center md:items-start space-y-8 md:w-1/2">
           <div className="space-y-4 text-center md:text-left">
             <h2 className="text-green-400 font-medium tracking-[0.2em] uppercase text-sm md:text-base animate-pulse">
               Welcome to my portfolio
             </h2>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl  font-bold leading-tight">
               Hi, I'm{" "}
               <span className="text-gradient block md:inline">Nirmal Mani</span>
             </h1>
-            <div className="text-2xl md:text-4xl text-slate-300 font-light h-20">
+            <div className="text-xl sm:text-2xl md:text-4xl text-slate-300 font-light h-16 md:h-20">
               <Type />
             </div>
-            <p className="max-w-lg text-slate-400 text-lg leading-relaxed hidden md:block">
+            <p className="max-w-lg text-slate-400 text-base md:text-lg leading-relaxed text-center md:text-left">
               Dedicated and passionated Web Developer with a strong foundation
               in modern web technologies. Turning complex problems into elegant,
               user-friendly digital solutions.

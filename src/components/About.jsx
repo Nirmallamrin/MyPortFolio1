@@ -10,11 +10,11 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-custom-image-about min-h-screen py-20 px-6 ">
+    <div className="bg-custom-image-about min-h-screen py-24 md:py-32 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 tracking-tight">
             ABOUT <span className="text-gradient">ME</span>
           </h1>
           <div className="w-24 h-1.5 bg-green-500 mx-auto rounded-full"></div>
@@ -42,7 +42,7 @@ const About = () => {
           {/* Right Side: Content Section */}
           <div className="w-full lg:w-7/12 flex flex-col space-y-10">
             <div className="space-y-6 text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white uppercase tracking-tight leading-tight">
                 Crafting Digital Excellence <br className="hidden md:block" />
                 <span className="text-green-400 font-extrabold italic">
                   Through Modern Code

@@ -38,10 +38,10 @@ const Skills = () => {
   const softSkills = ["English", "Malayalam", "Tamil", "Communication", "Problem Solving"];
 
   return (
-    <div className="bg-custom-image-about min-h-screen py-32 px-6">
+    <div className="bg-custom-image-about min-h-screen py-24 md:py-32 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 tracking-tight">
             MY <span className="text-gradient">SKILLS</span>
           </h1>
           <div className="w-24 h-1.5 bg-green-500 mx-auto rounded-full"></div>
