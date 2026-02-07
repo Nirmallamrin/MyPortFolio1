@@ -3,7 +3,7 @@ import { TiHtml5 } from "react-icons/ti";
 import { IoLogoCss3, IoLogoJavascript, IoLogoVercel } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiNodejs } from "react-icons/di";
-import { SiExpress, SiMongodb, SiPostman, SiSupabase, SiWordpress } from "react-icons/si";
+import { SiExpress, SiMongodb, SiPostman, SiSupabase, SiWordpress, SiNextdotjs, SiMeta, SiPostgresql, SiNetlify, SiGit, SiFigma } from "react-icons/si";
 import { FaReact, FaWindows, FaSlack } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
@@ -12,19 +12,25 @@ const Skills = () => {
     { name: "HTML5", icon: <TiHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <IoLogoCss3 className="text-blue-500" /> },
     { name: "JavaScript", icon: <IoLogoJavascript className="text-yellow-400" /> },
-    { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-cyan-400" /> },
     { name: "React", icon: <FaReact className="text-blue-400" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+    { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-cyan-400" /> },
     { name: "Node.js", icon: <DiNodejs className="text-green-500" /> },
     { name: "Express.js", icon: <SiExpress className="text-slate-300" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+    { name: "SQL / PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
     { name: "Supabase", icon: <SiSupabase className="text-emerald-500" /> },
+    { name: "Meta API", icon: <SiMeta className="text-blue-500" /> },
     { name: "WordPress", icon: <SiWordpress className="text-blue-400" /> },
   ];
 
   const tools = [
     { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
+    { name: "Git", icon: <SiGit className="text-orange-600" /> },
+    { name: "Figma", icon: <SiFigma className="text-purple-500" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
     { name: "Vercel", icon: <IoLogoVercel className="text-white" /> },
+    { name: "Netlify", icon: <SiNetlify className="text-cyan-400" /> },
     { name: "Slack", icon: <FaSlack className="text-purple-400" /> },
     { name: "Windows", icon: <FaWindows className="text-blue-400" /> },
   ];
@@ -32,7 +38,7 @@ const Skills = () => {
   const softSkills = ["English", "Malayalam", "Tamil", "Communication", "Problem Solving"];
 
   return (
-    <div className="bg-custom-image min-h-screen py-32 px-6">
+    <div className="bg-custom-image-about min-h-screen py-32 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
@@ -83,7 +89,10 @@ const Skills = () => {
             </h2>
             <div className="flex flex-wrap gap-4">
               {softSkills.map((skill, index) => (
-                <div key={index} className="px-6 py-4 glass-card bg-white/5 hover:bg-green-500/10 border-white/10 hover:border-green-500/50 flex-1 min-w-[150px] text-center font-bold text-slate-300 transition-all cursor-default">
+                <div
+                  key={index}
+                  className="px-6 py-4 glass-card bg-white/5 hover:bg-green-500/10 border-white/10 hover:border-green-500/50 flex-1 min-w-[150px] text-center font-bold text-slate-300 transition-all cursor-default"
+                >
                   {skill}
                 </div>
               ))}

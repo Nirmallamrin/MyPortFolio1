@@ -76,7 +76,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="bg-custom-image min-h-screen py-32 px-6">
+    <div className="bg-custom-image-about min-h-screen py-32 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
@@ -87,7 +87,10 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
-            <div key={index} className="glass-card flex flex-col group overflow-hidden p-0 rounded-3xl border-white/5">
+            <div
+              key={index}
+              className="glass-card flex flex-col group overflow-hidden p-0 rounded-3xl border-white/5"
+            >
               <div className="relative overflow-hidden h-64">
                 <img
                   src={project.imageUrl}
@@ -98,11 +101,21 @@ const Projects = () => {
 
                 {/* Hover Links Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="p-4 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-green-500 hover:text-slate-900 transition-all">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-green-500 hover:text-slate-900 transition-all"
+                  >
                     <FaGithub size={24} />
                   </a>
                   {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="p-4 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-green-500 hover:text-slate-900 transition-all">
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-4 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-green-500 hover:text-slate-900 transition-all"
+                    >
                       <FaExternalLinkAlt size={22} />
                     </a>
                   )}
@@ -112,7 +125,10 @@ const Projects = () => {
               <div className="p-8">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags?.map((tag, tIndex) => (
-                    <span key={tIndex} className="text-[10px] uppercase tracking-widest font-bold px-3 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20">
+                    <span
+                      key={tIndex}
+                      className="text-[10px] uppercase tracking-widest font-bold px-3 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/20"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -149,7 +165,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Projects

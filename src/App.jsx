@@ -1,35 +1,53 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
+
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
-import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import Header from './components/Header';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-
+import WhatsAppButton from './components/common/WhatsAppButton';
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-      <main >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element ={<Skills/>}/>
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact/>}/>
-        </Routes>
+    <div className=" text-slate-100 min-h-screen">
+      <Header />
+      <main>
+        <section id="home">
+          <Home />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="skills">
+          <Skills />
+        </section>
+
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="resume">
+          <Resume />
+        </section>
+
+        <section id="blog">
+          <Blog />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
-      <Footer/>
-      </div>
-  )
-}
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  );
+};
 
 export default App

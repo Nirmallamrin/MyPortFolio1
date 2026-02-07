@@ -53,7 +53,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-custom-image min-h-screen py-32 px-6">
+    <div className="bg-custom-image-about min-h-screen py-32 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
@@ -82,7 +82,9 @@ const Contact = () => {
                       {item.icon}
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-widest text-slate-500 font-bold">{item.label}</p>
+                      <p className="text-xs uppercase tracking-widest text-slate-500 font-bold">
+                        {item.label}
+                      </p>
                       <p className="text-slate-200 font-medium">{item.value}</p>
                     </div>
                   </div>
@@ -100,7 +102,9 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Name</label>
+                    <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+                      Name
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -109,10 +113,16 @@ const Contact = () => {
                       placeholder="Your Name"
                       className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-green-500/50 transition-colors"
                     />
-                    {formErrors.name && <p className="text-red-500 text-xs font-bold">{formErrors.name}</p>}
+                    {formErrors.name && (
+                      <p className="text-red-500 text-xs font-bold">
+                        {formErrors.name}
+                      </p>
+                    )}
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Email</label>
+                    <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+                      Email
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -121,11 +131,17 @@ const Contact = () => {
                       placeholder="Email Address"
                       className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-green-500/50 transition-colors"
                     />
-                    {formErrors.email && <p className="text-red-500 text-xs font-bold">{formErrors.email}</p>}
+                    {formErrors.email && (
+                      <p className="text-red-500 text-xs font-bold">
+                        {formErrors.email}
+                      </p>
+                    )}
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Message</label>
+                  <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -134,14 +150,20 @@ const Contact = () => {
                     placeholder="How can I help you?"
                     className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-green-500/50 transition-colors resize-none"
                   ></textarea>
-                  {formErrors.message && <p className="text-red-500 text-xs font-bold">{formErrors.message}</p>}
+                  {formErrors.message && (
+                    <p className="text-red-500 text-xs font-bold">
+                      {formErrors.message}
+                    </p>
+                  )}
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full md:w-auto px-12 py-4 bg-green-500 hover:bg-green-600 disabled:bg-green-800 text-slate-900 font-black rounded-xl transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 shadow-xl shadow-green-500/20"
                 >
-                  {isSubmitting ? "SENDING..." : (
+                  {isSubmitting ? (
+                    "SENDING..."
+                  ) : (
                     <>
                       SEND MESSAGE <FaPaperPlane />
                     </>

@@ -1,14 +1,13 @@
 import React from "react";
 import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import img from "../assets/IMG35.jpg";
-import { Link } from "react-router-dom";
 import Type from "./Type";
 
 const Home = () => {
   return (
-    <div className="min-h-screen  bg-custom-image bg-cover bg-center text-white flex items-center justify-center p-6 pt-32 lg:pt-20">
-      <div className=" container mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <div className="min-h-screen bg-custom-image bg-cover bg-center text-white flex items-center justify-center p-6 pt-32 lg:pt-20 overflow-hidden">
+      <div className="container mx-auto px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         {/* Left Content */}
         <div className="flex flex-col items-center md:items-start space-y-8 md:w-1/2">
           <div className="space-y-4 text-center md:text-left">
@@ -30,12 +29,25 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-6 w-full md:w-auto">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => {
+                const element = document.getElementById("contact");
+                if (element) {
+                  const offset = 80;
+                  const bodyRect = document.body.getBoundingClientRect().top;
+                  const elementRect = element.getBoundingClientRect().top;
+                  const elementPosition = elementRect - bodyRect;
+                  const offsetPosition = elementPosition - offset;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }}
               className="px-8 py-4 bg-green-500 hover:bg-green-600 text-slate-900 font-bold rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-green-500/20 text-center w-full sm:w-auto"
             >
               Get In Touch
-            </Link>
+            </button>
             <div className="flex items-center space-x-6 text-2xl">
               <a
                 href="https://github.com/Nirmallamrin"

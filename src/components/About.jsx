@@ -10,7 +10,7 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-custom-image min-h-screen py-20 px-6 ">
+    <div className="bg-custom-image-about min-h-screen py-20 px-6 ">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -44,7 +44,9 @@ const About = () => {
             <div className="space-y-6 text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tight leading-tight">
                 Crafting Digital Excellence <br className="hidden md:block" />
-                <span className="text-green-400 font-extrabold italic">Through Modern Code</span>
+                <span className="text-green-400 font-extrabold italic">
+                  Through Modern Code
+                </span>
               </h2>
 
               <div className="grid gap-8">
@@ -55,10 +57,25 @@ const About = () => {
                       <FaBriefcase size={24} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-widest text-center md:text-left">Working Experience</h3>
+                      <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-widest text-center md:text-left">
+                        Working Experience
+                      </h3>
                       <p className="text-slate-400 leading-relaxed font-medium text-center md:text-left">
-                        I specialize in <span className="text-white font-semibold">React (Vite)</span> and <span className="text-white font-semibold">Next.js</span> development.
-                        My professional work focuses on building high-performance applications with <span className="text-white font-semibold">Supabase</span> for real-time backends, solidifying my ability to deliver scalable and modern digital products.
+                        I specialize in{" "}
+                        <span className="text-white font-semibold">
+                          React (Vite)
+                        </span>{" "}
+                        and{" "}
+                        <span className="text-white font-semibold">
+                          Next.js
+                        </span>{" "}
+                        development. My professional work focuses on building
+                        high-performance applications with{" "}
+                        <span className="text-white font-semibold">
+                          Supabase
+                        </span>{" "}
+                        for real-time backends, solidifying my ability to
+                        deliver scalable and modern digital products.
                       </p>
                     </div>
                   </div>
@@ -71,9 +88,18 @@ const About = () => {
                       <FaGraduationCap size={24} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-widest text-center md:text-left">Deep Learning</h3>
+                      <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-widest text-center md:text-left">
+                        Deep Learning
+                      </h3>
                       <p className="text-slate-400 leading-relaxed font-medium text-center md:text-left">
-                        Mastered the <span className="text-white font-semibold">MERN Stack</span> core fundamentals. My academic and self-driven study path has equipped me with a deep understanding of database architecture (MongoDB), backend logic (Express/Node), and frontend reactivity (React).
+                        Mastered the{" "}
+                        <span className="text-white font-semibold">
+                          MERN Stack
+                        </span>{" "}
+                        core fundamentals. My academic and self-driven study
+                        path has equipped me with a deep understanding of
+                        database architecture (MongoDB), backend logic
+                        (Express/Node), and frontend reactivity (React).
                       </p>
                     </div>
                   </div>
@@ -84,16 +110,24 @@ const About = () => {
             {/* Stats Grid - Aligned for better flow */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 pt-4">
               {stats.map((stat, index) => (
-                <div key={index} className="glass-card p-6 border-white/5 flex flex-col items-center text-center group hover:border-green-500/30 transition-colors">
-                  <div className="text-2xl md:text-3xl text-green-500 mb-3 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                  <div className="text-lg md:text-xl font-black text-white">{stat.value}</div>
-                  <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">{stat.label}</div>
+                <div
+                  key={index}
+                  className="glass-card p-6 border-white/5 flex flex-col items-center text-center group hover:border-green-500/30 transition-colors"
+                >
+                  <div className="text-2xl md:text-3xl text-green-500 mb-3 group-hover:scale-110 transition-transform">
+                    {stat.icon}
+                  </div>
+                  <div className="text-lg md:text-xl font-black text-white">
+                    {stat.value}
+                  </div>
+                  <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
 
             {/* Actions */}
-            
           </div>
         </div>
       </div>

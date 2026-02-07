@@ -4,7 +4,7 @@ import { FaDownload, FaEye } from "react-icons/fa";
 
 const Resume = () => {
   return (
-    <div className="min-h-screen bg-custom-image py-32 px-6 flex flex-col items-center">
+    <div className="min-h-screen bg-custom-image-about py-32 px-6 flex flex-col items-center">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tight">
@@ -21,7 +21,6 @@ const Resume = () => {
             >
               <FaDownload /> Download PDF
             </a>
-            
           </div>
         </div>
 

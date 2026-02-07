@@ -55,6 +55,12 @@
 }
 
 .bg-custom-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(15, 23, 42, 0.2)), url('/src/assets/img01.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('/src/assets/img01.jpg');
   background-attachment: fixed;
 }
+
+.bg-custom-image-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url('/src/assets/img01.jpg');
+  background-attachment: fixed;
+}
+

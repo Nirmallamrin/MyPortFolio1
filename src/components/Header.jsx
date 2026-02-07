@@ -1,16 +1,12 @@
-import React from 'react'
-import Navbar from './common/Navbar'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import Navbar from './common/Navbar';
 
 const Header = () => {
   return (
-    <div>
-        <div>
-            <Navbar/>
-        </div>
-        <Outlet/>
-    </div>
-  )
-}
+    <header>
+      <Navbar />
+    </header>
+  );
+};
 
 export default Header
