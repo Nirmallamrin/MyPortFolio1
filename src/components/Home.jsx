@@ -6,7 +6,7 @@ import Type from "./Type";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-custom-image bg-cover bg-center text-white flex items-center justify-center p-4 pt-28 md:p-6 md:pt-32 lg:pt-20 overflow-hidden">
+    <div className="min-h-screen bg-custom-image bg-cover bg-center text-white flex items-center justify-center p-4 mt-[-15px] md:p-6 md:pt-32 lg:pt-20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         {/* Left Content */}
         <div className="flex flex-col items-center md:items-start space-y-8 md:w-1/2">
