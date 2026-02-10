@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row gap-16 items-stretch">
           {/* Contact Info */}
           <div className="lg:w-1/3 space-y-6">
-            <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-green-500 pl-4 uppercase tracking-widest">
+            <h2 className="text-2xl font-bold text-white mb-7 border-l-4 border-green-500 pl-4 uppercase tracking-widest">
               Contact Info
             </h2>
             <div className="grid grid-cols-1 gap-4">
