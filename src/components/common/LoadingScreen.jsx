@@ -38,7 +38,7 @@ const LoadingScreen = () => {
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="relative z-10 w-16 h-16 flex items-center justify-center bg-slate-900 rounded-full border border-white/10 shadow-xl overflow-hidden"
+                    className="relative z-10 w-16 h-16 flex items-center justify-center bg-black rounded-full border border-white/10 shadow-xl overflow-hidden"
                 >
                     <img
                         src="/favicon.png"
