@@ -2,14 +2,23 @@ import React, { useState, useEffect } from "react";
 
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from "framer-motion";
 import img from "../assets/IMG35.jpg";
 import Type from "./Type";
 import ThreeBackground from "./ThreeBackground";
 import Cube3D from "./Cube3D";
 
 const Home = ({ isLoading }) => {
-  
+
+
+  const [showCube, setShowCube] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowCube((prev) => !prev);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Parallax effect for the image
   const x = useMotionValue(0);
@@ -148,56 +157,54 @@ const Home = ({ isLoading }) => {
           </motion.div>
         </div>
 
-        {/* Right Content - Image with Zoom Animation */}
-        <motion.div
-          style={{
-            rotateX,
-            rotateY,
-            transformStyle: "preserve-3d",
-          }}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          initial={{ scale: 0, opacity: 0, rotate: -10 }}
-          animate={
-            !isLoading
-              ? { scale: 1, opacity: 1, rotate: 0 }
-              : { scale: 0, opacity: 0, rotate: -10 }
-          }
-          transition={{
-            duration: 1.2,
-            ease: "easeOut",
-            delay: 0.5,
-          }}
-          className="flex justify-center items-center"
-        >
-          <div className="relative group r">
-            <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
-
-            <div className="relative ">
-              <img
-                src={img}
-                alt="Nirmal Mani"
-                className="w-64  md:w-80 lg:w-96 h-auto rounded-2xl border-4 border-white/5 object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl animate-float"
-              />
-
-              {/* Floating Badge */}
-              <div
+        {/* Right Content - Toggle between Image and 3D Cube */}
+        <div className="relative w-64 md:w-80 lg:w-96 aspect-square flex justify-center items-center">
+          <AnimatePresence mode="wait">
+            
+              <motion.div
+                key="image"
                 style={{
-                  transform: "translateZ(50px)",
+                  rotateX,
+                  rotateY,
                   transformStyle: "preserve-3d",
                 }}
-                className="absolute -bottom-4 -right-4 bg-slate-900/90 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl hidden md:block"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
+                animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                exit={{ scale: 0.8, opacity: 0, rotate: 10 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="relative group w-full h-full flex justify-center items-center"
               >
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium">
-                    Available for work
-                  </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
+
+                <div className="relative">
+                  <img
+                    src={img}
+                    alt="Nirmal Mani"
+                    className="w-full h-auto rounded-2xl border-4 border-white/5 object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl animate-float"
+                  />
+
+                  {/* Floating Badge */}
+                  <div
+                    style={{
+                      transform: "translateZ(50px)",
+                      transformStyle: "preserve-3d",
+                    }}
+                    className="absolute -bottom-4 -right-4 bg-slate-900/90 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl hidden md:block"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium">
+                        Available for work
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+              </motion.div>
+            
+          </AnimatePresence>
+        </div>
       </motion.div>
     </div>
   );

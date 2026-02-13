@@ -38,7 +38,7 @@ const Skills = () => {
   const softSkills = ["English", "Malayalam", "Tamil", "Communication", "Problem Solving"];
 
   return (
-    <div className="bg-custom-image-about min-h-screen py-24 md:py-32 px-4 md:px-6">
+    <div className=" min-h-screen py-24 md:py-32 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-20">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 tracking-tight">

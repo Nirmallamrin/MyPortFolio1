@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion';
-
+import ThreeBackground from './components/ThreeBackground';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
@@ -17,11 +17,9 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate initial loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,33 +30,27 @@ const App = () => {
       </AnimatePresence>
 
       <div className="text-slate-100 min-h-screen">
+        <ThreeBackground />
         <Header />
         <main>
           <section id="home">
             <Home isLoading={isLoading} />
           </section>
-
-
           <section id="about">
             <About />
           </section>
-
           <section id="skills">
             <Skills />
           </section>
-
           <section id="projects">
             <Projects />
           </section>
-
           <section id="resume">
             <Resume />
           </section>
-
           <section id="blog">
             <Blog />
           </section>
-
           <section id="contact">
             <Contact />
           </section>

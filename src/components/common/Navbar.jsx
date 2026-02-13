@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { FaCodeBranch, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -73,11 +72,10 @@ const Navbar = () => {
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-end md:justify-center px-4">
       <nav
-        className={`flex items-center transition-all duration-300 px-2 py-1.5 rounded-2xl backdrop-blur-xl  ${
-          scrolled
-            ? "bg-white/5  border-white/10"
-            : "bg-gray-50/5 border border-transparent"
-        }`}
+        className={`flex items-center transition-all duration-300 px-2 py-1.5 rounded-2xl backdrop-blur-xl  ${scrolled
+          ? "bg-white/5  border-white/10"
+          : "bg-gray-50/5 border border-transparent"
+          }`}
       >
         <div className="md:flex md:items-center">
           {/* Desktop Menu */}
@@ -86,11 +84,10 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeSection === link.id
-                    ? "text-green-400 bg-green-400/10"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
-                }`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeSection === link.id
+                  ? "text-green-400 bg-green-400/10"
+                  : "text-slate-300 hover:text-white hover:bg-white/5"
+                  }`}
               >
                 {link.name}
               </button>
@@ -109,21 +106,19 @@ const Navbar = () => {
 
           {/* Mobile Menu Backdrop */}
           <div
-            className={`fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 transition-all duration-300 md:hidden ${
-              isMobileMenuOpen
-                ? "opacity-100 visible"
-                : "opacity-0 invisible pointer-events-none"
-            }`}
+            className={`fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 transition-all duration-300 md:hidden ${isMobileMenuOpen
+              ? "opacity-100 visible"
+              : "opacity-0 invisible pointer-events-none"
+              }`}
             onClick={toggleMobileMenu}
           />
 
           {/* Mobile Menu Drawer */}
           <div
-            className={`fixed top-[-25px] right-[-20px] h-screen w-[250px] bg-slate-900/95 backdrop-blur-xl z-50 transition-all duration-300 transform border-l border-white/10 md:hidden ${
-              isMobileMenuOpen
-                ? "translate-x-0 opacity-100 visible"
-                : "translate-x-full opacity-0 invisible"
-            }`}
+            className={`fixed top-[-25px] right-[-20px] h-screen w-[250px] bg-slate-900/95 backdrop-blur-xl z-50 transition-all duration-300 transform border-l border-white/10 md:hidden ${isMobileMenuOpen
+              ? "translate-x-0 opacity-100 visible"
+              : "translate-x-full opacity-0 invisible"
+              }`}
           >
             <div className="flex flex-col h-full p-8">
               <div className="flex justify-between items-center mb-12">
@@ -140,11 +135,10 @@ const Navbar = () => {
                   <li key={link.id}>
                     <button
                       onClick={() => scrollToSection(link.id)}
-                      className={`text-2xl font-bold transition-colors ${
-                        activeSection === link.id
-                          ? "text-green-400"
-                          : "text-slate-300 hover:text-white"
-                      }`}
+                      className={`text-2xl font-bold transition-colors ${activeSection === link.id
+                        ? "text-green-400"
+                        : "text-slate-300 hover:text-white"
+                        }`}
                     >
                       {link.name}
                     </button>

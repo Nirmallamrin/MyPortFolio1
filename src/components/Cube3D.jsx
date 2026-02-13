@@ -1,39 +1,62 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { useRef, useMemo } from "react";
+import * as THREE from "three";
 
-function Cube() {
-  const ref = useRef();
-  const { mouse } = useThree();
+function SegmentedCube() {
+  const groupRef = useRef();
 
-  useFrame(() => {
-    if (!ref.current) return;
+  // Create 27 cubes for a 3x3x3 grid
+  const cubeSegments = useMemo(() => {
+    const cubes = [];
+    for (let x = -1; x <= 1; x++) {
+      for (let y = -1; y <= 1; y++) {
+        for (let z = -1; z <= 1; z++) {
+          cubes.push({ position: [x * 1.05, y * 1.05, z * 1.05] });
+        }
+      }
+    }
+    return cubes;
+  }, []);
 
-    ref.current.rotation.x += (mouse.y * 0.6 - ref.current.rotation.x) * 0.05;
-    ref.current.rotation.y += (mouse.x * 0.6 - ref.current.rotation.y) * 0.05;
+  useFrame((state) => {
+    if (!groupRef.current) return;
+    const time = state.clock.getElapsedTime();
 
-    ref.current.position.y = Math.sin(Date.now() * 0.001) * 0.2;
+    // Smooth auto-rotation
+    groupRef.current.rotation.x = Math.sin(time * 0.4) * 0.2;
+    groupRef.current.rotation.y = time * 0.3;
+
+    // Subtle floating animation
+    groupRef.current.position.y = Math.sin(time) * 0.1;
   });
 
   return (
-    <mesh ref={ref} scale={2}>
-      <boxGeometry />
-      <meshStandardMaterial
-        color="#0b0b0b"
-        metalness={0.9}
-        roughness={0.25}
-        emissive="#22c55e"
-        emissiveIntensity={0.12}
-      />
-    </mesh>
+    <group ref={groupRef}>
+      {cubeSegments.map((cube, i) => (
+        <mesh key={i} position={cube.position}>
+          <boxGeometry args={[1, 1, 1]} />
+          <meshStandardMaterial
+            color="#111111"
+            metalness={0.8}
+            roughness={0.2}
+            envMapIntensity={1}
+          />
+        </mesh>
+      ))}
+    </group>
   );
 }
 
 export default function Cube3D() {
   return (
-    <Canvas camera={{ position: [0, 0, 4] }} dpr={[1, 1.5]}>
-      <ambientLight intensity={0.4} />
-      <directionalLight position={[3, 3, 3]} intensity={1} />
-      <Cube />
-    </Canvas>
+    <div className="w-full h-full">
+      <Canvas camera={{ position: [5, 5, 5], fov: 45 }}>
+        <ambientLight intensity={0.2} />
+        <pointLight position={[10, 10, 10]} intensity={2} color="#ffffff" />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#22c55e" />
+        <spotLight position={[5, 5, 5]} angle={0.3} penumbra={1} intensity={1} />
+        <SegmentedCube />
+      </Canvas>
+    </div>
   );
 }

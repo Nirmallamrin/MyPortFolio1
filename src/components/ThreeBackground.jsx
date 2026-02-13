@@ -16,7 +16,7 @@ function Stars(props) {
     ref.current.rotation.y += (targetY - ref.current.rotation.y) * 0.1;
 
     // Constant slow rotation
-    ref.current.rotation.z += delta / 30;
+    ref.current.rotation.z += delta / 70;
   });
 
 
@@ -27,7 +27,7 @@ function Stars(props) {
         <PointMaterial
           transparent
           color="#4ade80"
-          size={0.003}
+          size={0.004}
           sizeAttenuation={true}
           depthWrite={false}
         />
