@@ -1,12 +1,12 @@
 import React from "react";
 import img1 from "../assets/IMG37.jpg";
-import { FaGraduationCap, FaBriefcase, FaCode } from "react-icons/fa";
+import { FaGraduationCap, FaBriefcase, FaCode, FaCloud, FaServer } from "react-icons/fa";
 
 const About = () => {
   const stats = [
-    { icon: <FaCode />, label: "Experience", value: "2+ Years" },
+    { icon: <FaCode />, label: "Experience", value: "1+ Years" },
     { icon: <FaBriefcase />, label: "Projects", value: "15+ Completed" },
-    { icon: <FaGraduationCap />, label: "Stack", value: "Full Stack" },
+    { icon: <FaServer />, label: "Domain", value: "Full Stack & Cloud" },
   ];
 
   return (
@@ -45,7 +45,7 @@ const About = () => {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white uppercase tracking-tight leading-tight">
                 Crafting Digital Excellence <br className="hidden md:block" />
                 <span className="text-green-400 font-extrabold italic">
-                  Through Modern Code
+                  Through Modern Code & Cloud
                 </span>
               </h2>
 
@@ -61,45 +61,64 @@ const About = () => {
                         Working Experience
                       </h3>
                       <p className="text-slate-400 leading-relaxed font-medium text-center md:text-left">
-                        I specialize in{" "}
+                        Specialized in building full-stack web applications using{" "}
                         <span className="text-white font-semibold">
-                          React (Vite)
-                        </span>{" "}
-                        and{" "}
+                          React.js
+                        </span>
+                        ,{" "}
                         <span className="text-white font-semibold">
                           Next.js
-                        </span>{" "}
-                        development. My professional work focuses on building
-                        high-performance applications with{" "}
+                        </span>
+                        , and modern databases like{" "}
                         <span className="text-white font-semibold">
                           Supabase
+                        </span>
+                        ,{" "}
+                        <span className="text-white font-semibold">
+                          Firebase
+                        </span>
+                        , and{" "}
+                        <span className="text-white font-semibold">
+                          PostgreSQL
+                        </span>
+                        . Expert in integrating{" "}
+                        <span className="text-white font-semibold">
+                          Meta Graph APIs (WhatsApp Business, Instagram, Facebook)
                         </span>{" "}
-                        for real-time backends, solidifying my ability to
-                        deliver scalable and modern digital products.
+                        to power real-time messaging, instant alerts, and high-conversion client communication.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Education/Study Card */}
+                {/* Cloud, DevOps & AI Card */}
                 <div className="glass-card hover:bg-white/5 border-white/5 p-8 transition-all duration-300">
                   <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
-                    <div className="flex-shrink-0 p-4 bg-blue-500/10 rounded-2xl text-blue-400">
-                      <FaGraduationCap size={24} />
+                    <div className="flex-shrink-0 p-4 bg-cyan-500/10 rounded-2xl text-cyan-400">
+                      <FaCloud size={24} />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-widest text-center md:text-left">
-                        Deep Learning
+                        Cloud, DevOps & AI Innovations
                       </h3>
                       <p className="text-slate-400 leading-relaxed font-medium text-center md:text-left">
-                        Mastered the{" "}
+                        Actively advancing across{" "}
                         <span className="text-white font-semibold">
-                          MERN Stack
-                        </span>{" "}
-                        core fundamentals. My academic and self-driven study
-                        path has equipped me with a deep understanding of
-                        database architecture (MongoDB), backend logic
-                        (Express/Node), and frontend reactivity (React).
+                          AWS Cloud infrastructure
+                        </span>
+                        , automated{" "}
+                        <span className="text-white font-semibold">
+                          DevOps pipelines
+                        </span>
+                        , and{" "}
+                        <span className="text-white font-semibold">
+                          VPS Server Setup with root access
+                        </span>
+                        . Passionate about exploring{" "}
+                        <span className="text-white font-semibold">
+                          AI-driven development & intelligent APIs
+                        </span>
+                        , production server hardening, and high-availability containerized deployments.
                       </p>
                     </div>
                   </div>

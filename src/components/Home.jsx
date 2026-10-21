@@ -5,7 +5,6 @@ import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from "framer-motion";
 import img from "../assets/IMG35.jpg";
 import Type from "./Type";
-import ThreeBackground from "./ThreeBackground";
 import Cube3D from "./Cube3D";
 
 const Home = ({ isLoading }) => {
@@ -49,9 +48,6 @@ const Home = ({ isLoading }) => {
 
   return (
     <div className="relative min-h-screen text-white flex items-center justify-center p-4 mt-[-15px] md:p-6 md:pt-32 lg:pt-20 overflow-hidden">
-      {/* 3D Moving Background */}
-      <ThreeBackground />
-
       <motion.div
         style={{ perspective: "1200px" }}
         initial={{ opacity: 0, y: 30 }}
@@ -97,9 +93,7 @@ const Home = ({ isLoading }) => {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="max-w-lg text-slate-400 text-base md:text-md leading-relaxed text-center md:text-left"
             >
-              Dedicated and passionated Web Developer with a strong foundation
-              in modern web technologies. Turning complex problems into elegant,
-              user-friendly digital solutions.
+              Full Stack Developer with 1+ year of experience building scalable web applications with React.js, Next.js, Supabase, and Firebase. Specialized in Meta API integrations WhatsApp Business, Instagram, Facebook that deliver real-time communication and measurable business impact.
             </motion.p>
           </div>
 

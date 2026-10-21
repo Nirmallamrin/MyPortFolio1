@@ -14,12 +14,20 @@ const Resume = () => {
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <a
-              href="https://drive.google.com/file/d/1UG_igq2vYn_6P-zX_9oQyeTTBbTvViYJ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1lxDpBVTQFsR79RPn99PjHCivQk8I2AOb/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-green-500 hover:bg-green-600 text-slate-900 font-bold rounded-xl transition-all transform hover:scale-105 flex items-center gap-2 shadow-xl shadow-green-500/20"
             >
               <FaDownload /> Download PDF
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1lxDpBVTQFsR79RPn99PjHCivQk8I2AOb/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all transform hover:scale-105 flex items-center gap-2 border border-white/10 backdrop-blur-sm"
+            >
+              <FaEye /> View Online
             </a>
           </div>
         </div>

@@ -29,10 +29,10 @@ const App = () => {
         {isLoading && <LoadingScreen key="loader" />}
       </AnimatePresence>
 
-      <div className="text-slate-100 min-h-screen">
+      <div className="text-slate-100 min-h-screen relative selection:bg-green-500 selection:text-slate-900">
         <ThreeBackground />
         <Header />
-        <main>
+        <main className="relative z-10">
           <section id="home">
             <Home isLoading={isLoading} />
           </section>
